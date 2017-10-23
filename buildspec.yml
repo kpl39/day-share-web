@@ -1,7 +1,7 @@
 version: 0.1
 environment_variables:
     plaintext:
-        S3_BUCKET: "dayshare-web"
+        S3_BUCKET: "dayshare.co"
         BUILD_ENV: "prod"
 phases:
     install:
@@ -15,7 +15,7 @@ phases:
             - ng build --env=${BUILD_ENV}
     post_build:
          commands:
-            - aws s3 cp dist s3://dayshare-web --recursive
+            - aws s3 cp dist s3://dayshare.co --recursive
             - echo Build completed on `date`
 artifacts:
     files:
