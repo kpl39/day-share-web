@@ -1,0 +1,47 @@
+
+<div class="container">
+  <div>
+      <h1 class="purple">Day Share</h1>
+      <h3>Find Your Co-op Day Care Group in Minutes!</h3>
+  </div>
+</div>
+
+<section class="search">
+  <div class="container">
+
+    
+    <div class="form-group search-box">
+      <div class="main-options">
+        <div style="float:left;margin-right:0.3em;">
+          <label for="address">Address</label>
+          <input placeholder="enter your home address" name="address" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search class="search-bar" [formControl]="searchControl">
+        </div>
+        <div style="float:left;margin-right:0.3em;">
+          <label for="age">Age</label>
+          <select [(ngModel)]="age" (ngModelChange)="logAge()" name="age">
+            <option *ngFor="let age of ages" [ngValue]="age.value">{{age.display}}</option>
+          </select>
+        </div>
+        <div style="float:left;">
+            <h3>Advanced Options <button (click)="toggleAdvOpts()" type="button" class="adv-button"><i class="fa fa-chevron-right" *ngIf="!advOpsToggle"></i><i class="fa fa-chevron-down" *ngIf="advOpsToggle"></i> </button></h3>
+        </div>
+        <div>
+          <button type="button" (click)="submitSearch()">Search</button>
+        </div>
+      </div>
+      <div *ngIf="advOpsToggle">
+          <p>Advanced Options</p>
+      </div>    
+    </div>
+
+    <div class="search-results">
+      <h1>Search Results</h1>
+      <div *ngFor="let result of results" class="result-card">
+        <h3>{{result._source.username}}</h3>
+        <p>{{result._source.description}}</p>
+        <img src={{result._source.profile_image_url}}>
+        <p>{{result.sort[0].toFixed(1)}} miles away<p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,53 @@
+/* .menu-padding {
+    margin-top: 250px;
+} */
+
+.purple {
+    color: #CE9CE8;
+}
+
+.search-bar {
+    width: 33em;
+}
+
+.adv-button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline:none;
+    background-repeat:no-repeat;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+input, label, select {
+    display:block;
+}
+
+.search-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-options {
+    display: flex;
+    flex-direction: column;
+    align-self: baseline;
+}
+
+.result-card {
+    margin: 0.5em;
+    padding: 0.5em;
+    background-color: #CE9CE8;
+}
+
+@media (min-width: 769px) {
+    .main-options {
+        flex-direction: row;
+    }
+    
+}

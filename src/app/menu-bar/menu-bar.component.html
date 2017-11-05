@@ -1,0 +1,57 @@
+
+<!-- <div class="navbar fixed-top navbar-light bg-faded">
+    <a class="navbar-brand" href="#">Fixed top</a> -->
+  <!-- <div class="container">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <i class="mdi mdi-menu mdi-48px white"></i>
+          </button>
+          <a class="navbar-brand" routerLink="/">
+                  
+          </a>
+      </div>
+      <div class="navbar-collapse collapse links" id="navToggle">
+          <ul class="nav navbar-nav">
+              <li><a routerLink="/" routerLinkActive="active">Home</a></li>
+              <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
+          </ul>
+      </div>
+  </div> -->
+<!-- </div> --> 
+
+
+<!-- <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-left" #toggleButton type="button" data-toggle="collapse" data-target="#navbarList" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand logo" routerLink="/home">
+    <span class="navbar-toggler-icon"></span>
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbarList">
+    <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login">Login</a>
+      </li>
+    </ul>
+  </div>
+</nav> -->
+
+
+<header class="main-header">
+  <a class="site-logo" routerLink="/">
+    <img src="../../assets/images/dayShare-200px.svg" style="width: 50px" alt="Day Share - Logo">
+  </a>
+  <a class="toggle-logo">
+    <img src="../../assets/images/toggle-logo-200.svg" style="width: 50px" alt="Menu Toggle Logo" (click)="toggleNav()">
+  </a>
+
+  <ul class="nav" [class.menu-collapsed]="!menuCollapsed">
+    <li><a routerLink="/home">About</a></li>
+    <li><a routerLink="/login">Sign Up</a></li>
+    <li><a routerLink="/login">Log In</a></li>
+  </ul>
+</header>
